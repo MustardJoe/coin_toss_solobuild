@@ -1,4 +1,4 @@
-import doomFlip from './threesidecoin.js'
+import doomFlip from './threesidecoin.js';
 
 const coinImg = document.getElementById('coin-img');
 const doomicornButton = document.getElementById('doomicorn-button');
@@ -10,6 +10,7 @@ const headChoice = document.getElementById('head-choice');
 const gutsChoice = document.getElementById('guts-choice');
 const winsDisplay = document.getElementById('wins-display');
 const lossesDisplay = document.getElementById('losses-display');
+const message = document.getElementById('message');
 
 let counterHeads = 0;
 let counterMiddle = 0;
@@ -24,23 +25,22 @@ doomicornButton.addEventListener('click', () => {
 
     const imageSource = './assets/pic' + flip + 'd3.jpg';
     coinImg.src = imageSource;
-    console.log(flip);
 
     if(flip === 'one') {
-        counterHeads++
-        counterGlobal++
+        counterHeads++;
+        counterGlobal++;
         rollHeads.textContent = counterHeads;
         rollTotal.textContent = counterGlobal;
     }
     if(flip === 'two') {
-        counterMiddle++
-        counterGlobal++
+        counterMiddle++;
+        counterGlobal++;
         rollMiddle.textContent = counterMiddle;
         rollTotal.textContent = counterGlobal;
     }
     if(flip === 'three') {
-        counterTails++
-        counterGlobal++
+        counterTails++;
+        counterGlobal++;
         rollTails.textContent = counterTails;
         rollTotal.textContent = counterGlobal;
     }
