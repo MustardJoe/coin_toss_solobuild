@@ -10,10 +10,9 @@
 </head>
 <body>
 
-    <header>
-        <h1>Doomicorn's 3 Sided Coin Flip</h1>
-        <h3>The disolution of reality is upon us!</h3>
-    </header>
+    <h1 id="topBanner">Doomicorn's 3 Sided Coin Flip</h1>
+    <h3>The disolution of reality is upon us!</h3>
+    
 
     <div>
         <div class="words">
@@ -24,29 +23,51 @@
 
         <div id="doomdiv">
             <img id="doomicornimg" src="./assets/doomicorn1.png" 
-            alt="robiticorn will usher in a new era" 
-            title="roboticorn will usher in the new era">
+            alt="doomicorn will usher in a new era" 
+            title="doomicorn will usher in the new era">
         </div>
-        
     </div>
 
-    <div>
+    <div id="box">
         <img id="coin-img" src="assets/piconed3.jpg">
-    </div>
-
-    <div>
-
+        
+        <span id="counter-block">
+            <p class="foolishmortal">
+                Results of your Sisyphean task
+            </p>
+            <ul>
+                <li>Heads: <span id="roll-heads">0</span></li>
+                <li>Guts: <span id="roll-middle">0</span></li>
+                <li>Tails: <span id="roll-tails">0</span></li>
+                <li>Total Flips: <span id="roll-total">0</span></li>
+            </ul>
+            <p class="foolishmortal">
+                You have an infinite number of rolls left to complete!
+            </p>
+        </span>
     </div>
     
     <div id="buttondiv">
         <button id="doomicorn-button">FLIP THE DOOMICORN COIN!</button>
     </div>
 
+    <p>
+        <label>
+            <input id="head-choice" type="radio" name="coin-side"> Unihead
+        </label>
+        <label>
+            <input id="guts-choice" type="radio" name="coin-side" checked> Uniguts
+        </label>
+        <label>
+            <input type="radio" name="coin-side"> Unibutt
+        </label>
+    </p>
 
-
-
-
-
+    <footer>
+        <span id="wins-display">Wins: 0</span>
+        <span id="losses-display"> Losses: 0</span>
+        <span id="message">Welcome to the END TIMES! </span>
+    </footer>
 
     <script type="module" src="src/app.js"></script>
 </body>
